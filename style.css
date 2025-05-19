@@ -1,0 +1,155 @@
+/* Basislayout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Überschrift */
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Formular */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="time"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Checkbox-Gruppe */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  background: #ecf0f1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.checkbox-group input {
+  margin-right: 4px;
+}
+
+/* Button */
+button[type="submit"] {
+  padding: 0.75rem;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #219150;
+}
+
+/* Erinnerungen-Liste */
+section {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 30vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+li {
+  background: #f9f9f9;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+li button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+li .editBtn {
+  background: #2980b9;
+  color: white;
+}
+
+li .editBtn:hover {
+  background: #1f5e8c;
+}
+
+li .deleteBtn {
+  background: #c0392b;
+  color: white;
+}
+
+li .deleteBtn:hover {
+  background: #992d22;
+}
+
+/* Medienabfrage für kleine Geräte */
+@media (max-height: 700px) {
+  main {
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+}

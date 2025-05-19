@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabletten Erinnerung</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<body>
+  <main>
+    <h1>💊 Tabletten Erinnerung</h1>
+
+    <form id="reminderForm">
+      <label for="name">Medikament:</label>
+      <input type="text" id="name" required />
+
+      <label for="time">Uhrzeit:</label>
+      <input type="time" id="time" required />
+
+      <label>Wochentage:</label>
+      <div id="days" class="checkbox-group">
+        <label><input type="checkbox" value="1">Mo</label>
+        <label><input type="checkbox" value="2">Di</label>
+        <label><input type="checkbox" value="3">Mi</label>
+        <label><input type="checkbox" value="4">Do</label>
+        <label><input type="checkbox" value="5">Fr</label>
+        <label><input type="checkbox" value="6">Sa</label>
+        <label><input type="checkbox" value="0">So</label>
+      </div>
+
+      <input type="hidden" id="editIndex" value="" />
+      <button type="submit">Erinnerung speichern</button>
+    </form>
+
+    <section>
+      <h2>Gespeicherte Erinnerungen</h2>
+      <ul id="reminderList"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
